@@ -58,7 +58,7 @@ log()
   while [ "$keep_running" ]; do
     date=`date +%Y-%m-%d_%H:%M:%S`
     echo -e "%START:$ID:$date\n" >> $LOG
-    top -bn 1 >> $LOG
+    top -bn 1 -c >> $LOG
     echo -e "%END:$ID:$date\n" >> $LOG
     sleep 1
   done
